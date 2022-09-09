@@ -19,6 +19,9 @@ class Passenger(models.Model):
     passport = fields.Char(string='Passport Number')
     address = fields.Char(string='Address')
     phone = fields.Char(string='Phone')
+    ticket_ids = fields.One2many(comodel_name='normiairplane.ticket',
+                                 inverse_name='passenger_id', 
+                                 string='Ticket List')
     
     
     

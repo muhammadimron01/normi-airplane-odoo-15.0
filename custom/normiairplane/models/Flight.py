@@ -5,7 +5,7 @@ class Flight(models.Model):
     _name = 'normiairplane.flight'
     _description = 'Flight Item'
 
-    code = fields.Char(string='Flight Code')
+    name = fields.Char(string='Flight Code')
     source = fields.Selection(string='Source', 
                               selection=[
                                 ('jakarta', 'Jakarta'),
@@ -41,4 +41,9 @@ class Flight(models.Model):
                                         ('lampung', 'Lampung'),
                                    ])
     take_of = fields.Datetime(string='Take Of Date')
+    price = fields.Integer(string='Price')
     seat = fields.Integer(string='Seats')
+    ticket_ids = fields.One2many(comodel_name='normiairplane.ticket',
+                                inverse_name='flight_id',           
+                                string='Ticket Code')
+    

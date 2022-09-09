@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- normiairplane.ticket tree view -->
+    <record id="normiairplane_ticket_view_tree" model="ir.ui.view">
+        <field name="name">Ticket Tree</field>
+        <field name="model">normiairplane.ticket</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="passenger_id"/>
+                <field name="flight_id"/>
+                <field name="gender"/>
+                <field name="nationality"/>
+                <field name="price"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- normiairplane.ticket form view -->
+    <record id="normiairplane_ticket_view_form" model="ir.ui.view">
+        <field name="name">Ticket Form</field>
+        <field name="model">normiairplane.ticket</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group name="ids" string="Flight and Passenger ID">
+                        <field name="name"/>
+                        <field name="passenger_id"/>
+                        <field name="flight_id"/>
+                    </group>
+                    <group name="detail" string="Ticket Detail">
+                        <field name="gender"/>
+                        <field name="nationality"/>
+                        <field name="passport"/>
+                        <field name="price"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <!-- normiairplane.ticket action window -->
+    <record id="normiairplane_ticket_action" model="ir.actions.act_window">
+        <field name="name">Ticket</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">normiairplane.ticket</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

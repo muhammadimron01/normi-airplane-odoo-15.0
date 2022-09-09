@@ -29,6 +29,7 @@
         'views/templates.xml',
         'views/flight_view.xml',
         'views/passenger_view.xml',
+        'views/ticket_view.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode

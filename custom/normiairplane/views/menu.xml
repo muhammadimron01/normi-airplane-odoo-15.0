@@ -18,6 +18,13 @@
               name="Passenger" 
               parent="normiairplane_menu_root"
               action="normiairplane_passenger_action" 
+              sequence="20"/>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="normiairplane_ticket_menu_act" 
+              name="Ticket" 
+              parent="normiairplane_menu_root" 
+              action="normiairplane_ticket_action" 
               sequence="30"/>
 
 </odoo>

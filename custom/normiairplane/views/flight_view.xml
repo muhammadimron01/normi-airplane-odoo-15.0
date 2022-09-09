@@ -7,11 +7,12 @@
         <field name="model">normiairplane.flight</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="code"/>
+                <field name="name"/>
                 <field name="source"/>
                 <field name="destination"/>
                 <field name="take_of"/>
                 <field name="seat"/>
+                <field name="price"/>
             </tree>
         </field>
     </record>
@@ -24,13 +25,14 @@
             <form string="">
                 <sheet>
                     <group name="flight_code" string="Flight Code">
-                        <field name="code"/>
+                        <field name="name"/>
                     </group>
                     <group name="flight_detail" string="Flight Details">
                         <field name="source"/>
                         <field name="destination"/>
                         <field name="take_of"/>
                         <field name="seat"/>
+                        <field name="price"/>
                     </group>
                 </sheet>
             </form>
