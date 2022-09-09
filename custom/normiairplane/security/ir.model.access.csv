@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_normiairplane_flight,access.normiairplane.flight,model_normiairplane_flight,,1,1,1,1
+access_normiairplane_passenger,access.normiairplane.passenger,model_normiairplane_passenger,,1,1,1,1
