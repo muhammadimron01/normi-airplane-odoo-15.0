@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+    <menuitem id="normiairplane_menu_root" 
+              name="Normi Airplane" 
+              sequence="10"/>
+    
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="normiairplane_flight_menu_act" 
+              name="Flight" 
+              parent="normiairplane_menu_root" 
+              action="normiairplane_flight_action" 
+              sequence="10"/>
+
+</odoo>
