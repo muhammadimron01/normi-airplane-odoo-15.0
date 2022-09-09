@@ -1,0 +1,1 @@
+./odoo-bin --addons-path=/home/normi/odooproject/normi-airplane-odoo-15.0/custom,/home/normi/odooproject/normi-airplane-odoo-15.0/addons --xmlrpc-port=8069 --db_port 5432 -d normiairplane -u normiairplane
