@@ -28,6 +28,7 @@
                         <field name="name"/>
                         <field name="passenger_id"/>
                         <field name="flight_id"/>
+                        <field name="total"/>
                     </group>
                     <group name="detail" string="Ticket Detail">
                         <field name="gender"/>

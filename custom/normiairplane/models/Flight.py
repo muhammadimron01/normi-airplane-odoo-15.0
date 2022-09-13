@@ -42,7 +42,7 @@ class Flight(models.Model):
                                    ])
     take_of = fields.Datetime(string='Take Of Date')
     price = fields.Integer(string='Price')
-    seat = fields.Integer(string='Seats')
+    seat = fields.Integer(string='Remaining Seats')
     ticket_ids = fields.One2many(comodel_name='normiairplane.ticket',
                                 inverse_name='flight_id',           
                                 string='Ticket Code')
