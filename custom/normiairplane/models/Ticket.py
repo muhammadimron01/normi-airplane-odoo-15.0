@@ -16,6 +16,7 @@ class Ticket(models.Model):
     nationality = fields.Char(string='Nationality')
     total = fields.Integer(string='Total')
     price = fields.Integer(compute='_compute_price', string='Price')
+    purchase_date = fields.Datetime(string='Date')
 
     state = fields.Selection([
         ('none', ''),

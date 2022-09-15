@@ -9,6 +9,7 @@
             <tree>
                 <field name="name"/>
                 <field name="passenger_id"/>
+                <field name="purchase_date"/>
                 <field name="flight_id"/>
                 <field name="gender"/>
                 <field name="nationality"/>
@@ -38,6 +39,7 @@
                 <sheet>
                     <group name="ids" string="Flight and Passenger ID">
                         <field name="name" attrs="{'readonly': [('state', '!=', 'none')]}"/>
+                        <field name="purchase_date" attrs="{'readonly': [('state', '!=', 'none')]}" />
                         <field name="passenger_id" attrs="{'readonly': [('state', '!=', 'none')]}"/>
                         <field name="flight_id" attrs="{'readonly': [('state', '!=', 'none')]}"/>
                         <field name="total" attrs="{'readonly': [('state', '!=', 'none'), ('state', '!=', 'booking')]}"/>
