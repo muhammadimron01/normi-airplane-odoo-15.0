@@ -25,6 +25,7 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'wizzard/report_ticket_wizzard_view.xml',
         'views/views.xml',
         'views/templates.xml',
         'views/flight_view.xml',
