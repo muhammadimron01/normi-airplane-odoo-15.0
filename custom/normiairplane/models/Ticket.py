@@ -6,17 +6,19 @@ class Ticket(models.Model):
     _name = 'normiairplane.ticket'
     _description = 'Ticket'
 
-    name = fields.Char(string='Ticket Code')
+    name = fields.Char(string='Ticket Code', required=True)
     passenger_id = fields.Many2one(comodel_name='normiairplane.passenger', 
-                                    string='Passengers')
+                                   string='Passengers',
+                                   required=True)
     flight_id = fields.Many2one(comodel_name='normiairplane.flight', 
-                                 string='Flights')
+                                string='Flights',
+                                required=True)
     gender = fields.Char(compute='_compute_gender', string='Gender')
     passport = fields.Char(string='Passport Number')
     nationality = fields.Char(string='Nationality')
-    total = fields.Integer(string='Total')
+    total = fields.Integer(string='Total', required=True)
     price = fields.Integer(compute='_compute_price', string='Price')
-    purchase_date = fields.Datetime(string='Date')
+    purchase_date = fields.Datetime(string='Date', required=True)
 
     state = fields.Selection([
         ('none', ''),

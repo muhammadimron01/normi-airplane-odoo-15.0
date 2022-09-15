@@ -5,8 +5,9 @@ class Flight(models.Model):
     _name = 'normiairplane.flight'
     _description = 'Flight Item'
 
-    name = fields.Char(string='Flight Code')
-    source = fields.Selection(string='Source', 
+    name = fields.Char(string='Flight Code', required=True)
+    source = fields.Selection(string='Source',
+                              required=True,
                               selection=[
                                 ('jakarta', 'Jakarta'),
                                 ('bandung', 'Bandung'),
@@ -23,7 +24,8 @@ class Flight(models.Model):
                                 ('tanjung_pinang', 'Tanjung Pinang'),
                                 ('lampung', 'Lampung'),
                               ])
-    destination = fields.Selection(string='Destination', 
+    destination = fields.Selection(string='Destination',
+                                   required=True, 
                                    selection=[
                                         ('jakarta', 'Jakarta'),
                                         ('bandung', 'Bandung'),
@@ -40,9 +42,9 @@ class Flight(models.Model):
                                         ('tanjung_pinang', 'Tanjung Pinang'),
                                         ('lampung', 'Lampung'),
                                    ])
-    take_of = fields.Datetime(string='Take Of Date')
-    price = fields.Integer(string='Price')
-    seat = fields.Integer(string='Remaining Seats')
+    take_of = fields.Datetime(string='Take Of Date', required=True)
+    price = fields.Integer(string='Price', required=True)
+    seat = fields.Integer(string='Remaining Seats', required=True)
     ticket_ids = fields.One2many(comodel_name='normiairplane.ticket',
                                 inverse_name='flight_id',           
                                 string='Ticket Code')
