@@ -13,7 +13,12 @@
                 <field name="gender"/>
                 <field name="nationality"/>
                 <field name="price"/>
-                <field name="state"/>
+                <field name="state" 
+                       decoration-warning="state == 'booking'"
+                       decoration-info="state == 'confirm'"
+                       decoration-success="state == 'done'"
+                       widget="badge"
+                />
             </tree>
         </field>
     </record>
